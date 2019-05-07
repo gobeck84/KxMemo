@@ -10,6 +10,14 @@ import UIKit
 
 class DiaryListTableViewController: UITableViewController {
 
+    let formatter: DateFormatter = {
+        let f = DateFormatter()
+        f.dateStyle = .long
+        f.timeStyle = .medium
+        f.locale = Locale(identifier: "Ko_kr")
+        return f
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,25 +30,20 @@ class DiaryListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Diary.dummyDiaryList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "diaryListCell", for: indexPath)
+        let target = Diary.dummyDiaryList[indexPath.row]
+        cell.textLabel?.text = target.content
+        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
