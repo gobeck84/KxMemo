@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="오늘의 일기" id="zPM-ba-9yu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CTt-Tn-6IG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CTt-Tn-6IG">
+                            <connections>
+                                <segue destination="g1K-u2-SBn" kind="presentation" id="XeI-O1-LGV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wb6-M3-BgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,6 +76,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OM1-zF-9N9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-445" y="-204"/>
+        </scene>
+        <!--새 일기-->
+        <scene sceneID="o6e-bQ-BsW">
+            <objects>
+                <viewController id="iNd-Pn-6by" customClass="ComposeViewController" customModule="KxMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1o-U7-5ET">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="제목" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mD9-HJ-wSz">
+                                <rect key="frame" x="40" y="133" width="334" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RfD-sX-5R1">
+                                <rect key="frame" x="40" y="238" width="334" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mD9-HJ-wSz" firstAttribute="leading" secondItem="XPc-HK-Zh6" secondAttribute="leading" constant="40" id="4Y1-7B-cam"/>
+                            <constraint firstItem="mD9-HJ-wSz" firstAttribute="top" secondItem="XPc-HK-Zh6" secondAttribute="top" constant="45" id="HFr-VU-lxQ"/>
+                            <constraint firstItem="XPc-HK-Zh6" firstAttribute="trailing" secondItem="mD9-HJ-wSz" secondAttribute="trailing" constant="40" id="Vkp-vH-fhH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XPc-HK-Zh6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="새 일기" id="5Wi-bx-q3a">
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="iPC-uq-3Nt">
+                            <connections>
+                                <action selector="close:" destination="iNd-Pn-6by" id="4zY-nh-a07"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="Ibp-ec-BEo">
+                            <connections>
+                                <action selector="save:" destination="iNd-Pn-6by" id="8W0-Iw-3rI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="RfD-sX-5R1" id="38Y-IG-x7M"/>
+                        <outlet property="titleTextField" destination="mD9-HJ-wSz" id="E3G-Ja-nr7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgb-Af-kg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2198.5507246376815" y="-204.24107142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D7d-cE-Cf6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g1K-u2-SBn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rCO-mN-cZd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iNd-Pn-6by" kind="relationship" relationship="rootViewController" id="Ak6-vM-ilB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ek6-lP-y9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286.9565217391305" y="-204.24107142857142"/>
         </scene>
     </scenes>
 </document>
