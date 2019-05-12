@@ -18,6 +18,15 @@ class DiaryListTableViewController: UITableViewController {
         return f
     }()
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
+            let target = Diary.dummyDiaryList[indexPath.row]
+            if let vc = segue.destination as? DetailViewController{
+                vc.diary = target
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

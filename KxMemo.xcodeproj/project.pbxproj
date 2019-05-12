@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DE0A247C2279EC0500E00672 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0A247B2279EC0500E00672 /* model.swift */; };
 		DE0A247E2279F04000E00672 /* DiaryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0A247D2279F04000E00672 /* DiaryListTableViewController.swift */; };
+		DE778DB722882DB200F35C1C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE778DB622882DB200F35C1C /* DetailViewController.swift */; };
 		DE8ABB38226310F4003B2552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8ABB37226310F4003B2552 /* AppDelegate.swift */; };
 		DE8ABB3D226310F4003B2552 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8ABB3B226310F4003B2552 /* Main.storyboard */; };
 		DE8ABB40226310F4003B2552 /* KxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE8ABB3E226310F4003B2552 /* KxMemo.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		DE0A247B2279EC0500E00672 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		DE0A247D2279F04000E00672 /* DiaryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListTableViewController.swift; sourceTree = "<group>"; };
+		DE778DB622882DB200F35C1C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE8ABB34226310F3003B2552 /* KxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8ABB37226310F4003B2552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE8ABB3C226310F4003B2552 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				DE8ABB3E226310F4003B2552 /* KxMemo.xcdatamodeld */,
 				DE0A247D2279F04000E00672 /* DiaryListTableViewController.swift */,
 				DE8F7BF922871434003BE144 /* ComposeViewController.swift */,
+				DE778DB622882DB200F35C1C /* DetailViewController.swift */,
 			);
 			path = KxMemo;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				DE8F7BFA22871434003BE144 /* ComposeViewController.swift in Sources */,
 				DE8ABB40226310F4003B2552 /* KxMemo.xcdatamodeld in Sources */,
 				DE0A247E2279F04000E00672 /* DiaryListTableViewController.swift in Sources */,
+				DE778DB722882DB200F35C1C /* DetailViewController.swift in Sources */,
 				DE0A247C2279EC0500E00672 /* model.swift in Sources */,
 				DE8ABB38226310F4003B2552 /* AppDelegate.swift in Sources */,
 			);
