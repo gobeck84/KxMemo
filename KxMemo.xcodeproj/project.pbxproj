@@ -16,6 +16,7 @@
 		DE8ABB42226310F5003B2552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8ABB41226310F5003B2552 /* Assets.xcassets */; };
 		DE8ABB45226310F5003B2552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8ABB43226310F5003B2552 /* LaunchScreen.storyboard */; };
 		DE8F7BFA22871434003BE144 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8F7BF922871434003BE144 /* ComposeViewController.swift */; };
+		DE9875D9228FC59F00497DEA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9875D8228FC59F00497DEA /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		DE8ABB44226310F5003B2552 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE8ABB46226310F5003B2552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8F7BF922871434003BE144 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		DE9875D8228FC59F00497DEA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				DE0A247D2279F04000E00672 /* DiaryListTableViewController.swift */,
 				DE8F7BF922871434003BE144 /* ComposeViewController.swift */,
 				DE778DB622882DB200F35C1C /* DetailViewController.swift */,
+				DE9875D8228FC59F00497DEA /* DataManager.swift */,
 			);
 			path = KxMemo;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				DE8F7BFA22871434003BE144 /* ComposeViewController.swift in Sources */,
 				DE8ABB40226310F4003B2552 /* KxMemo.xcdatamodeld in Sources */,
 				DE0A247E2279F04000E00672 /* DiaryListTableViewController.swift in Sources */,
+				DE9875D9228FC59F00497DEA /* DataManager.swift in Sources */,
 				DE778DB722882DB200F35C1C /* DetailViewController.swift in Sources */,
 				DE0A247C2279EC0500E00672 /* model.swift in Sources */,
 				DE8ABB38226310F4003B2552 /* AppDelegate.swift in Sources */,

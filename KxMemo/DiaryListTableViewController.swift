@@ -20,7 +20,7 @@ class DiaryListTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
-            let target = Diary.dummyDiaryList[indexPath.row]
+            let target = DataManager.shared.diaryList[indexPath.row]
             if let vc = segue.destination as? DetailViewController{
                 vc.diary = target
             }
@@ -40,20 +40,20 @@ class DiaryListTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        DataManager.shared.fetchDiary()
         tableView.reloadData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Diary.dummyDiaryList.count
+        return DataManager.shared.diaryList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "diaryListCell", for: indexPath)
-        let target = Diary.dummyDiaryList[indexPath.row]
+        let target = DataManager.shared.diaryList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         return cell
     }
     

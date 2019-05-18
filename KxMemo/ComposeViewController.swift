@@ -27,7 +27,8 @@ class ComposeViewController: UIViewController {
         let inputTitle = titleTextField.text!
         let inputContent = contentTextView.text!
         
-        Diary.dummyDiaryList.append(Diary(title: inputTitle , content: inputContent))
+    
+        DataManager.shared.addNewDiary(inputTitle, inputContent)
         dismiss(animated: true, completion: nil)
     }
     
